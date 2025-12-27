@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair & There - Gentlemen's Barbershop</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle-btn" id="sidebarToggleBtn">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Left Side Navigation -->
+    <nav class="sidebar-nav" id="sidebarNav">
+        <div class="sidebar-content">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Hair & There</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a></li>
+                <li><a href="#services" class="nav-link">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Services</span>
+                </a></li>
+                <li><a href="#gallery" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a></li>
+                <li class="nav-item-has-dropdown">
+                    <a href="#" class="nav-link" id="accountLink">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="nav-dropdown">
+                        <li><a href="login.html" class="nav-dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a></li>
+                        <li><a href="register.html" class="nav-dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Register</span>
+                        </a></li>
+                        <li><a href="dashboard.html" class="nav-dropdown-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="auth-buttons">
+                    <a href="login.html" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Log In</span>
+                    </a>
+                    <a href="register.html" class="register-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Register</span>
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-subtitle">- GENTLEMEN'S -</h1>
+            <h2 class="hero-title">SALONSHOP</h2>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="about-image-bg" style="background-image: url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">OUR STORY</h2>
+                <p class="about-text">
+                    I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me and you can start adding your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I'm a great place for you to tell a story and let your users know a little more about you.
+                </p>
+                <p class="about-text">
+                    I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me and you can start adding your own content and make changes to the font.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <h2 class="services-title">OUR SERVICES</h2>
+            <p class="services-subtitle">Premium beauty and grooming services tailored to your needs</p>
+            
+            <div class="services-grid">
+                <!-- Haircut & Styling -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="service-card-title">Haircut & Styling</h3>
+                    <p class="service-description">Expert haircuts and styling services for all hair types. From classic cuts to modern trends, our skilled stylists create the perfect look for you.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$35</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Hair Color / Highlights -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="service-card-title">Hair Color / Highlights</h3>
+                    <p class="service-description">Transform your look with professional coloring and highlighting techniques. Full color, balayage, ombre, and creative color solutions.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$85</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Facials & Skin Care -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="service-card-title">Facials & Skin Care</h3>
+                    <p class="service-description">Rejuvenate and refresh your skin with our professional facial treatments. Deep cleansing, anti-aging, and customized skincare solutions like facial peels, facials.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$65</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Makeup -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-card-title">Makeup</h3>
+                    <p class="service-description">Professional makeup application for special occasions, photoshoots, or everyday glamour. Airbrush makeup and traditional application available.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$55</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Nail Care -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="service-card-title">Nail Care</h3>
+                    <p class="service-description">Complete nail care services including manicures, pedicures, gel polish, nail art, and extensions. Pamper yourself with our luxury nail treatments like acrylic nails.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$30</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Spa & Massage -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="service-card-title">Spa & Massage</h3>
+                    <p class="service-description">Relax and unwind with our therapeutic massage services. Swedish, deep tissue, hot stone, and aromatherapy massages to rejuvenate body and mind.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$75</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Bridal Packages -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="service-card-title">Bridal Packages</h3>
+                    <p class="service-description">Complete bridal beauty packages for your special day. Hair, makeup, nails, and trial sessions. Make your wedding day perfect with our comprehensive bridal services.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$350</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+
+                <!-- Men's Grooming -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="service-card-title">Men's Grooming</h3>
+                    <p class="service-description">Professional grooming services for the modern gentleman. Classic haircuts, beard trimming, hot towel shaves, and facial treatments tailored for men.</p>
+                    <div class="service-pricing">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$40</span>
+                    </div>
+                    <button class="service-book-btn">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stylists Section -->
+    <section id="stylists" class="stylists-section">
+        <div class="stylists-container">
+            <h2 class="stylists-title">MEET OUR EXPERTS</h2>
+            <p class="stylists-subtitle">Our talented team of professional stylists and beauty experts</p>
+            
+            <div class="stylists-grid">
+                <!-- Stylist 1 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg" alt="Emily Rodriguez">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">Emily Rodriguez</h3>
+                        <p class="stylist-title">Senior Hair Stylist</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (127 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>8 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Haircut & Styling</span>
+                                <span class="skill-tag">Hair Color</span>
+                                <span class="skill-tag">Highlights</span>
+                                <span class="skill-tag">Bridal Hair</span>
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with Emily</button>
+                    </div>
+                </div>
+
+                <!-- Stylist 2 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="James Mitchell">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">James Mitchell</h3>
+                        <p class="stylist-title">Men's Grooming Specialist</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0 (89 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>12 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Classic Cuts</span>
+                                <span class="skill-tag">Beard Trim</span>
+                                <span class="skill-tag">Hot Towel Shave</span>
+                                <span class="skill-tag">Fade Styles</span>
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with James</button>
+                    </div>
+                </div>
+
+                <!-- Stylist 3 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=500&fit=crop" alt="Sophia Chen">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">Sophia Chen</h3>
+                        <p class="stylist-title">Makeup Artist</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (156 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>6 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Bridal Makeup</span>
+                                <span class="skill-tag">Airbrush</span>
+                                <span class="skill-tag">Editorial</span>
+                                <span class="skill-tag">Special Events</span>
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with Sophia</button>
+                    </div>
+                </div>
+
+                <!-- Stylist 4 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=500&fit=crop" alt="Marcus Johnson">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">Marcus Johnson</h3>
+                        <p class="stylist-title">Spa & Massage Therapist</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (203 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>10 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Deep Tissue</span>
+                                <span class="skill-tag">Hot Stone</span>
+                                <span class="skill-tag">Aromatherapy</span>
+                                <span class="skill-tag">Swedish</span>
+                                
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with Marcus</button>
+                    </div>
+                </div>
+
+                <!-- Stylist 5 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Isabella Martinez">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">Isabella Martinez</h3>
+                        <p class="stylist-title">Nail Art Specialist</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                
+                            </div>
+                            <span class="rating-text">4.7 (94 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>5 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Nail Art</span>
+                                <span class="skill-tag">Gel Polish</span>
+                                <span class="skill-tag">Manicures</span>
+                                <span class="skill-tag">Pedicures</span>
+                                <span class="skill-tag">Nail Art</span>
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with Isabella</button>
+                    </div>
+                </div>
+
+                <!-- Stylist 6 -->
+                <div class="stylist-card">
+                    <div class="stylist-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Alex Thompson">
+                        <div class="stylist-overlay">
+                            <div class="stylist-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-info">
+                        <h3 class="stylist-name">Alex Thompson</h3>
+                        <p class="stylist-title">Skin Care Expert</p>
+                        <div class="stylist-rating">
+                            <div class="star-rating-small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (142 reviews)</span>
+                        </div>
+                        <div class="stylist-experience">
+                            <i class="fas fa-award"></i>
+                            <span>7 Years Experience</span>
+                        </div>
+                        <div class="stylist-skills">
+                            <h4>Specialties</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Facials</span>
+                                <span class="skill-tag">Anti-Aging</span>
+                                <span class="skill-tag">Acne Treatment</span>
+                                <span class="skill-tag">Hydration</span>
+                            </div>
+                        </div>
+                        <button class="stylist-book-btn">Book with Alex</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-title">CLIENT TESTIMONIALS</h2>
+            <p class="testimonials-subtitle">See what our clients say about their experience</p>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Sarah Johnson">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">Sarah Johnson</h3>
+                            <p class="testimonial-service">Hair Color & Highlights</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Absolutely amazing experience! The color turned out exactly as I envisioned. The staff is professional, friendly, and truly cares about their clients. I'll definitely be back!"</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Michael Chen">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">Michael Chen</h3>
+                            <p class="testimonial-service">Men's Grooming</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best haircut I've ever had! The attention to detail is incredible. They took the time to understand exactly what I wanted and delivered beyond my expectations."</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=47" alt="Emma Williams">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">Emma Williams</h3>
+                            <p class="testimonial-service">Bridal Package</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"My wedding day was perfect thanks to this amazing team! The bridal package included everything - hair, makeup, and nails. I felt like a princess! Highly recommend!"</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=51" alt="David Martinez">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">David Martinez</h3>
+                            <p class="testimonial-service">Facials & Skin Care</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The facial treatment left my skin feeling incredible! The therapist was knowledgeable and used premium products. My skin has never looked better. Worth every penny!"</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=20" alt="Lisa Anderson">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">Lisa Anderson</h3>
+                            <p class="testimonial-service">Nail Care</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best nail salon in town! The manicure and pedicure were perfection. The nail art designs are creative and the quality is outstanding. My nails looked amazing for weeks!"</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/150?img=68" alt="Robert Taylor">
+                        </div>
+                        <div class="testimonial-info">
+                            <h3 class="testimonial-name">Robert Taylor</h3>
+                            <p class="testimonial-service">Spa & Massage</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Incredible massage experience! The therapist worked out all my tension and stress. The atmosphere is so relaxing and the service is top-notch. I feel renewed!"</p>
+                    <div class="before-after">
+                        <div class="before-after-item">
+                            <span class="ba-label">Before</span>
+                            <div class="ba-image ba-before" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop');"></div>
+                        </div>
+                        <div class="before-after-item">
+                            <span class="ba-label">After</span>
+                            <div class="ba-image ba-after" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop');"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+            <h2 class="gallery-title">GALLERY</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.pexels.com/photos/7697200/pexels-photo-7697200.jpeg');">
+                        <div class="gallery-label">Barbershop Tools</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="gallery-label">Haircut Service</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="gallery-label">Vintage Razors</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="gallery-label">Clipper Work</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="gallery-label">Grooming Accessories</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="gallery-label">Product Collection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">CONTACT</h2>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

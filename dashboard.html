@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hair & There</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle-btn" id="sidebarToggleBtn">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Left Side Navigation -->
+    <nav class="sidebar-nav" id="sidebarNav">
+        <div class="sidebar-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Hair & There</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="index.html#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a></li>
+                <li><a href="index.html#services" class="nav-link">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Services</span>
+                </a></li>
+                <li><a href="index.html#gallery" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a></li>
+                <li><a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="#" class="nav-link" id="appointmentsLink">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>My Appointments</span>
+                </a></li>
+                <li class="nav-item-has-dropdown active">
+                    <a href="#" class="nav-link" id="accountLink">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="nav-dropdown">
+                        <li><a href="login.html" class="nav-dropdown-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a></li>
+                        <li><a href="register.html" class="nav-dropdown-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Register</span>
+                        </a></li>
+                        <li><a href="dashboard.html" class="nav-dropdown-link active">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="auth-buttons">
+                    <a href="#" class="login-btn" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="welcome-section">
+                    <h1 class="dashboard-title">Welcome Back!</h1>
+                    <p class="dashboard-subtitle" id="userGreeting">Good morning, let's start your day</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-primary" id="bookAppointmentBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Book Appointment</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="upcomingAppointments">3</h3>
+                        <p class="stat-label">Upcoming Appointments</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalBookings">12</h3>
+                        <p class="stat-label">Total Bookings</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="favoriteServices">5</h3>
+                        <p class="stat-label">Favorite Services</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="pendingAppointments">2</h3>
+                        <p class="stat-label">Pending Approval</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Upcoming Appointments -->
+                <div class="dashboard-card appointments-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Upcoming Appointments</span>
+                        </h2>
+                        <a href="#" class="view-all-link">View All</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="appointments-list" id="appointmentsList">
+                            <!-- Appointment items will be populated by JavaScript -->
+                            <div class="appointment-item">
+                                <div class="appointment-date">
+                                    <div class="date-number">15</div>
+                                    <div class="date-month">Dec</div>
+                                </div>
+                                <div class="appointment-details">
+                                    <h3 class="appointment-service">Haircut & Styling</h3>
+                                    <p class="appointment-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>10:00 AM - 11:00 AM</span>
+                                    </p>
+                                    <p class="appointment-stylist">
+                                        <i class="fas fa-user"></i>
+                                        <span>Emily Rodriguez</span>
+                                    </p>
+                                </div>
+                                <div class="appointment-actions">
+                                    <button class="btn-icon" title="Cancel">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Reschedule">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="appointment-item">
+                                <div class="appointment-date">
+                                    <div class="date-number">18</div>
+                                    <div class="date-month">Dec</div>
+                                </div>
+                                <div class="appointment-details">
+                                    <h3 class="appointment-service">Hair Color / Highlights</h3>
+                                    <p class="appointment-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2:00 PM - 4:30 PM</span>
+                                    </p>
+                                    <p class="appointment-stylist">
+                                        <i class="fas fa-user"></i>
+                                        <span>Emily Rodriguez</span>
+                                    </p>
+                                </div>
+                                <div class="appointment-actions">
+                                    <button class="btn-icon" title="Cancel">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Reschedule">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="appointment-item">
+                                <div class="appointment-date">
+                                    <div class="date-number">22</div>
+                                    <div class="date-month">Dec</div>
+                                </div>
+                                <div class="appointment-details">
+                                    <h3 class="appointment-service">Facials & Skin Care</h3>
+                                    <p class="appointment-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>11:00 AM - 12:00 PM</span>
+                                    </p>
+                                    <p class="appointment-stylist">
+                                        <i class="fas fa-user"></i>
+                                        <span>Alex Thompson</span>
+                                    </p>
+                                </div>
+                                <div class="appointment-actions">
+                                    <button class="btn-icon" title="Cancel">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <button class="btn-icon" title="Reschedule">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card quick-actions-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-bolt"></i>
+                            <span>Quick Actions</span>
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="quick-actions-grid">
+                            <button class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </div>
+                                <span>Book Appointment</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-user-edit"></i>
+                                </div>
+                                <span>Update Profile</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>Rate Service</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span>Contact Support</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card activity-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-history"></i>
+                            <span>Recent Activity</span>
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4 class="activity-title">Appointment Completed</h4>
+                                    <p class="activity-desc">Haircut & Styling with Emily Rodriguez</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4 class="activity-title">Appointment Booked</h4>
+                                    <p class="activity-desc">Hair Color / Highlights scheduled for Dec 18</p>
+                                    <span class="activity-time">5 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4 class="activity-title">Review Submitted</h4>
+                                    <p class="activity-desc">You reviewed Facials & Skin Care</p>
+                                    <span class="activity-time">1 week ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4 class="activity-title">Profile Updated</h4>
+                                    <p class="activity-desc">Your profile information was updated</p>
+                                    <span class="activity-time">2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favorite Services -->
+                <div class="dashboard-card favorites-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorite Services</span>
+                        </h2>
+                        <a href="index.html#services" class="view-all-link">Explore More</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="favorites-list">
+                            <div class="favorite-item">
+                                <div class="favorite-icon">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <div class="favorite-details">
+                                    <h3 class="favorite-name">Haircut & Styling</h3>
+                                    <p class="favorite-price">From $35</p>
+                                </div>
+                                <button class="btn-book-sm">Book Now</button>
+                            </div>
+
+                            <div class="favorite-item">
+                                <div class="favorite-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="favorite-details">
+                                    <h3 class="favorite-name">Hair Color / Highlights</h3>
+                                    <p class="favorite-price">From $85</p>
+                                </div>
+                                <button class="btn-book-sm">Book Now</button>
+                            </div>
+
+                            <div class="favorite-item">
+                                <div class="favorite-icon">
+                                    <i class="fas fa-spa"></i>
+                                </div>
+                                <div class="favorite-details">
+                                    <h3 class="favorite-name">Facials & Skin Care</h3>
+                                    <p class="favorite-price">From $65</p>
+                                </div>
+                                <button class="btn-book-sm">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
